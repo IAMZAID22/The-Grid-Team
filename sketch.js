@@ -5,7 +5,13 @@ var pla1, pla2
 var lv = 1;
 var text1 = "You Win Stage 1";
 var text2 = "Press Space for next Stage"
-
+var pla1r,pla1l,pla2r,pla2l
+function preload(){
+  pla1r = loadImage("player1r.png");
+  pla1l = loadImage("player1l.png");
+  pla2r = loadImage("player2r.png");
+  pla2l = loadImage("player2l.png");
+}
 function setup() {
   createCanvas(800, 800)
 
@@ -51,17 +57,19 @@ function setup() {
   ground.shapeColor = "green"
 
   pla1 = createSprite(150, 720, 20, 50);
-  pla1.shapeColor = "blue"
+  pla1.addImage(pla1r)
+  pla1.scale = 0.4
 
   pla2 = createSprite(650, 720, 20, 50);
-  pla2.shapeColor = "orange"
+  pla2.addImage(pla2l)
+  pla2.scale = 0.4
 }
 
 function draw() {
   background(0);
 
   if (keyDown("w")) {
-    pla1.y = pla1.y - 15;
+    pla1.y = pla1.y - 13;
 
   }
   pla1.velocityY = pla1.velocityY + 0.7;
@@ -69,28 +77,28 @@ function draw() {
 
 
   if (keyDown("up_arrow")) {
-    pla2.y = pla2.y - 15;
+    pla2.y = pla2.y - 13;
 
   }
   pla2.velocityY = pla2.velocityY + 0.7;
 
   if (keyDown("a")) {
     pla1.x = pla1.x - 4;
-
+    pla1.addImage(pla1l)
 
   }
   if (keyDown("d")) {
     pla1.x = pla1.x + 4;
-
+    pla1.addImage(pla1r)
   }
 
   if (keyDown("left")) {
     pla2.x = pla2.x - 4;
-
+    pla2.addImage(pla2l)
   }
   if (keyDown("right")) {
     pla2.x = pla2.x + 4;
-
+    pla2.addImage(pla2r)
   }
 
   if (pla1.isTouching(bu1) && lv === 1) {
