@@ -72,7 +72,7 @@ function draw() {
     pla1.y = pla1.y - 13;
 
   }
-  pla1.velocityY = pla1.velocityY + 0.7;
+  pla1.velocityY = pla1.velocityY + 1;
 
 
 
@@ -80,7 +80,7 @@ function draw() {
     pla2.y = pla2.y - 13;
 
   }
-  pla2.velocityY = pla2.velocityY + 0.7;
+  pla2.velocityY = pla2.velocityY + 1;
 
   if (keyDown("a")) {
     pla1.x = pla1.x - 4;
