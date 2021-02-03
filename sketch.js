@@ -69,7 +69,7 @@ function draw() {
   background(0);
 
   if (keyDown("w")) {
-    pla1.y = pla1.y - 13;
+    pla1.y = pla1.y - 15;
 
   }
   pla1.velocityY = pla1.velocityY + 1;
@@ -77,27 +77,27 @@ function draw() {
 
 
   if (keyDown("up_arrow")) {
-    pla2.y = pla2.y - 13;
+    pla2.y = pla2.y - 15;
 
   }
   pla2.velocityY = pla2.velocityY + 1;
 
   if (keyDown("a")) {
-    pla1.x = pla1.x - 4;
+    pla1.x = pla1.x - 6;
     pla1.addImage(pla1l)
 
   }
   if (keyDown("d")) {
-    pla1.x = pla1.x + 4;
+    pla1.x = pla1.x + 6;
     pla1.addImage(pla1r)
   }
 
   if (keyDown("left")) {
-    pla2.x = pla2.x - 4;
+    pla2.x = pla2.x - 6;
     pla2.addImage(pla2l)
   }
   if (keyDown("right")) {
-    pla2.x = pla2.x + 4;
+    pla2.x = pla2.x + 6;
     pla2.addImage(pla2r)
   }
 
