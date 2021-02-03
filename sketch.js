@@ -174,6 +174,7 @@ function draw() {
   if (pla1.isTouching(bu2) && lv === 2) {
     pl3.velocityY = -2;
     bu2.height = 7;
+    bu2.y = 496
     if (pl3.y < 400) {
       pl3.y = -10
     }
@@ -183,10 +184,12 @@ function draw() {
     bu1.height = 7
     pl1.x = 250;
     pl1.y = 400
+    bu1.y = 411
   }
   if (pla2.isTouching(bu3) && lv === 2) {
     pl5.velocityY = -2
     bu3.height = 7
+    bu3.y = 321
   }
   if (pla1.isTouching(pl9) && pla2.isTouching(pl9)&&lv ===2) {
     textSize(20);
