@@ -69,7 +69,7 @@ function draw() {
   background(0);
 
   if (keyDown("w")) {
-    pla1.y = pla1.y - 15;
+    pla1.y = pla1.y - 17;
 
   }
   pla1.velocityY = pla1.velocityY + 1;
@@ -77,7 +77,7 @@ function draw() {
 
 
   if (keyDown("up_arrow")) {
-    pla2.y = pla2.y - 15;
+    pla2.y = pla2.y - 17;
 
   }
   pla2.velocityY = pla2.velocityY + 1;
